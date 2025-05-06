@@ -42,8 +42,7 @@ function outerOption(message) {
 function formatDate() {
   flatpickr('#date-input', {
     dateFormat: 'd/m/Y',
-    minDate: '10/05/2025',
-    maxDate: '01/06/2025',
+    minDate: '17/05/2025'
   });
 }
 
