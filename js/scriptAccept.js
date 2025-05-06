@@ -88,7 +88,7 @@ function infoConfirm(message) {
 
   $('#confirm-btn').click(function() {
     $(this).addClass('d-none');
-    setInterval(() => {
+    const interval = setInterval(() => {
       counter--;
       $('#confirmed').html(
         `<p>Pronto! Agora é só confirmar oficialmente... Vou fazer isso em ${counter} segundos :)<br>com a API do Whatsapp, porque fiquei com preguiça de construir a minha</p>`
@@ -96,6 +96,7 @@ function infoConfirm(message) {
     }, 1000);
 
     setTimeout(() => {
+      clearInterval(interval);
       const URL = `https://wa.me/5516994307583?text=Olá,%20meu%20lindo.%20Gostaria%20de%20confirmar%20o%20encontro%20para:%20${message[0]};%20data:%20${message[1]};%20horário:%20${message[2]}`;
       window.location.href = URL;
     }, 5000);

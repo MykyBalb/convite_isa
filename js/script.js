@@ -115,12 +115,10 @@ $(document).ready(function () {
       $('#option-two').text(
         `Você não quer nada? Tudo bem, eu entendo. Você será redirecionada em ${counter} segundos :(`
       );
-      if (counter === 0) {
-        clearInterval(interval);
-      }
     }, 1000);
-
+    
     setTimeout(() => {
+      clearInterval(interval);
       window.location.href = 'html/reject.html';
     }, 5000);
   }
@@ -133,13 +131,14 @@ $(document).ready(function () {
     let counter = 6;
     $('#section').addClass('d-none');
     $('#divAccepted').removeClass('d-none');
-    setInterval(() => {
+    const interval = setInterval(() => {
       counter--;
       $('#option').text(
         `Você aceitou o convite! Vamos combinar melhor em ${counter} segundos :)`
       );
     }, 1000);
     setTimeout(() => {
+      clearInterval(interval);
       window.location.href = 'html/accept.html';
     }, 5000);
   }
