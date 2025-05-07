@@ -8,7 +8,7 @@ $(document).ready(function () {
 
 function selectLocal(message) {
   const localIndex = $('#options').prop('selectedIndex');
-  if (localIndex !== 3) {
+  if (localIndex !== 4) {
     message.push($('#options').val());
     $('#place').addClass('d-none');
     $('#date').removeClass('d-none');
