@@ -74,6 +74,7 @@ $(document).ready(function () {
       'Nem um sorvete?',
       'Nem um café?',
       'Nem um piquenique?',
+      'Nem um cinema?'
     ];
     let count = [];
     let counter = 6;
